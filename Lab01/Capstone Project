@@ -1,0 +1,75 @@
+Use case :	
+1)User
+Thue Xe
+Tra xe
+-Xem thong tin xe
+	-thanh toan(nap tien/…)
+	- tạo tài khoản
+	-khoa xe
+-chon bai xe gan nhat
+	
+
+2) he thong 
+Cho thue xe
+Nhan xe
+xac thuc tai khoan (optional)
+thay doi cong thuc tinh hoa don 
+crud xe 
+gui mail 
+
+
+xac thuc thanh toan
+
+
+
+Thanh toán 
+Basic flow of event
+Khách hàng sẽ được miễn phí thuê xe nếu trả xe trong vòng 10 phút, kể cả tại các điểm trả khác nhau.
+Nếu khách hàng dùng xe hơn 10 phút, phí thuê xe được tính lũy tiến theo thời gian thuê như sau: Giá khởi điểcho 30 phút đầu là 10.000 đồng. Cứ mỗi 15 phút tiếp theo, khách sẽ phải trả thêm 3.000 đồng.
+Khách hàng cần phải đặt cọc trước số tiền bằng 40% giá trị của xe (đối với xe đạp đơn là 400.000 đồng, xe đạp đơn điện là 700.000 đồng và xe đạp đôi là 550.000 đồng).
+Sau khi xác nhận giao dịch, hệ thống sẽ tự động trừ tiền cọc trong thẻ/tài khoản của khách hàng và lưu lại giao dịch, khóa sẽ được tự động mở và khách hàng có thể lấy xe ra sử dụng
+Sử dụng thẻ tín dụng làm phương thức thanh toán cho hệ thống. Đối với thẻ tín dụng, mỗi nhóm sẽ được cấp 01 thẻ tín dụng ảo 
+Thực hiện các thao tác với thẻ tín dụng, hệ thống sẽ gọi đến một số API được cung cấp sẵn
+
+Alternative flows of events
+Giá xe đạp đôi điện đắt gấp 02 lần cách tính giá xe đạp đơn thường.
+Khách hàng trả xe sau khi chỉ thuê xe dưới 12 tiếng, khách hàng sẽ được hoàn tiền 10.000VNĐ mỗi tiếng trả sớm.
+ khách hàng trả xe sau khi mượn từ tiếng thứ 12 trở đi, khách hàng sẽ không được hoàn tiền
+khách hàng trả xe muộn quá thời gian thỏa thuận, cứ
+mỗi 15 phút muộn, khách sẽ phải trả thêm 2.000 đồng.
+
+=============================================
+Đặc tả thay đổi công thức hoá đơn 
+
+BASIC FLOW:
+1)Hệ thống chọn công thức cần update
+2)Hệ thống nhập công thức
+3)Validate công thức và update
+
+ALTERNATIVE FLOW:
+1a)Hệ thống chọn công thức cần xoá
+1a1)Tiến hành xoá công thức
+
+=============================================
+Thuê xe :
+
+BASIC FLOW :
+1)Tự động Hiển thị số lượng bãi xe ở gần trên bản đồ (bãi xe có thể dùng để thuê hoặc trả xe)
+2)Xem thông tin chi tiết về bãi xe và thông tin về từng xe trong bãi.
+3)Quét mã vạch trên ở khóa để có thể thuê xe.
+4) Xem thông tin và tình trạng xe khi đang sử dụng.
+
+ALTERNATIVE FLOW:
+1a) Search ra các bãi xe.
+
+=============================================
+Trả xe :
+	
+BASIC FLOW :
+1)Dựa vào ứng dụng để xem bãi xe gần nhất và chỗ để xe còn trống.
+2)Đưa xe về chỗ trống và đóng khóa xe lại
+ALTERNATIVE FLOW:
+1a) User có thể tự đến bãi xe mà ko dựa vào ứng dụng.
+
+
+
