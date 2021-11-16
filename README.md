@@ -1,4 +1,22 @@
 
+LAB 06 - CLASS DESIGN
+Tasks
+Each members is responsible for the design of few classes in Capstone Project.
+Contributions
+
+Dương Văn Bách - Nguyễn Minh Dũng: ViewBikeController class
+Nguyễn Gia Thanh: RentBikeController class.
+Revisions
+Other notes
+LAB 05 - INTERFACE DESIGN
+Tasks
+Design Graphical User Interfaces for the project.
+Design Interface to other system using Subsystem.
+Contributions
+Dương Văn Bách: Interbank Subsystem design.
+Nguyễn Minh Dũng: mockup screens design.
+Nguyễn Gia Thanh: screens specification.
+
 LAB 04 - ANALYSIS CLASS DIAGRAM
 
 Tasks
