@@ -276,4 +276,10 @@ public class HomeScreenHandler extends BaseScreenHandler implements Initializabl
             return;
         }
     }
+
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated method stub
+		
+	}
 }
