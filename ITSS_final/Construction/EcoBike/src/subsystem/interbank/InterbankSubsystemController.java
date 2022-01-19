@@ -10,11 +10,11 @@ import common.exception.NotEnoughBalanceException;
 import common.exception.NotEnoughTransactionInfoException;
 import common.exception.SuspiciousTransactionException;
 import common.exception.UnrecognizedException;
-import entity.transaction.Card;
-import entity.transaction.TransactionInfo;
-import utils.Configs;
-import utils.MyMap;
-import utils.Utils;
+import common.utils.Configs;
+import common.utils.MyMap;
+import common.utils.Utils;
+import domain.entity.transaction.Card;
+import domain.entity.transaction.TransactionInfo;
 
 /***
  * this class is used to control the interbank subsystem

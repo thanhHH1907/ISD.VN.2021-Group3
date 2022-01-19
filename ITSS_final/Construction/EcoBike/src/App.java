@@ -8,9 +8,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import utils.Configs;
-import views.screen.home.HomeScreenHandler;
+import presentation.screen.home.HomeScreenHandler;
+
 import java.io.IOException;
+
+import common.utils.Configs;
 
 /**
  * This class is the main class for our EcoBikeRental project

@@ -2,8 +2,8 @@ package subsystem;
 
 import common.exception.PaymentException;
 import common.exception.UnrecognizedException;
-import entity.transaction.Card;
-import entity.transaction.TransactionInfo;
+import domain.entity.transaction.Card;
+import domain.entity.transaction.TransactionInfo;
 
 /**
  * The {@code InterbankInterface} class is used to communicate with the

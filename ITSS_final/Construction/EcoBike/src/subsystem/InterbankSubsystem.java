@@ -1,7 +1,7 @@
 package subsystem;
 
-import entity.transaction.Card;
-import entity.transaction.TransactionInfo;
+import domain.entity.transaction.Card;
+import domain.entity.transaction.TransactionInfo;
 import subsystem.interbank.InterbankSubsystemController;
 
 /***
