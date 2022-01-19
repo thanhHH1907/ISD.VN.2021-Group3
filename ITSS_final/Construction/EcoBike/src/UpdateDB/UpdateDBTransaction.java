@@ -1,16 +1,12 @@
-package updateDB;
+package updatedb;
 
-/**
- * This class is used when transaction successful
- * @author BachDV
- * @version 1.0
- */
-import entity.invoice.Invoice;
-import entity.transaction.TransactionInfo;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.SQLException;
+
+import domain.entity.invoice.Invoice;
+import domain.entity.transaction.TransactionInfo;
 
 public interface UpdateDBTransaction {
 	/**

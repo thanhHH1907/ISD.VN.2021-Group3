@@ -1,24 +1,29 @@
-package updateDB;
+package updatedb;
 
 
-/**
- * This class is used when return bike successfully
- * @author BachDV
- * @version 1.0
- */
-import controller.ResultScreenController;
-import entity.bike.Bike;
-import entity.invoice.Invoice;
-import entity.transaction.TransactionInfo;
+import domain.entity.bike.Bike;
+import domain.entity.invoice.Invoice;
+import domain.entity.transaction.TransactionInfo;
+import domain.repository.BikeRepositoryInterface;
+import domain.repository.InvoiceRepositoryInterface;
+import domain.repository.OrderRepositoryInterface;
 import javafx.stage.Stage;
-import utils.Configs;
-import views.screen.payment.ResultScreenHandler;
+import presentation.controller.ResultScreenController;
+import presentation.screen.payment.ResultScreenHandler;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 
+import common.utils.Configs;
+import data.repository.BikeRepositoryImpl;
+import data.repository.InvoiceRepositoryImpl;
+import data.repository.OrderRepositoryImpl;
+
 public class ReturnBike implements UpdateDBTransaction {
+    private BikeRepositoryInterface bikeRepository = new BikeRepositoryImpl();
+    private OrderRepositoryInterface orderRepository = new OrderRepositoryImpl();
+    private InvoiceRepositoryInterface invoiceRepository = new InvoiceRepositoryImpl();
     @Override
     /**
 	 * insert invoice, update order of the invoice, update bike of the order, update station of the bike to db
@@ -27,11 +32,11 @@ public class ReturnBike implements UpdateDBTransaction {
 	 */
     public void updateDB(Invoice invoice) throws SQLException {
         invoice.getOrder().setEnd(LocalDateTime.now());
-        new Bike().updateQtyDB(0, invoice.getOrder().getRentedBike());
-        invoice.getOrder().updateOrderDB();
-        invoice.creatNewInvoiceDB();
+        bikeRepository.updateQtyDB(0, invoice.getOrder().getRentedBike());
+        orderRepository.updateOrderDB(invoice.getOrder());
+        invoiceRepository.creatNewInvoiceDB(invoice);
         // set new station for bike
-        new Bike().updateBikeDB(invoice.getOrder().getRentedBike().getId(),
+        bikeRepository.updateBikeDB(invoice.getOrder().getRentedBike().getId(),
                 invoice.getOrder().getRentedBike().getStation().getId());
     }
 
