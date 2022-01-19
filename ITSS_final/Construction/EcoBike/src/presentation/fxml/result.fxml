@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #9dcc9d;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" prefHeight="70.0" prefWidth="1366.0">
          <children>
@@ -31,7 +31,7 @@
                         <Image url="@../../../assets/images/Logo.png" />
                      </image>
                   </ImageView>
-                  <Text fill="#575252" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Result" wrappingWidth="374.3984375" GridPane.columnIndex="1">
+                  <Text fill="#02a102" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Result" wrappingWidth="374.3984375" GridPane.columnIndex="1">
                      <font>
                         <Font name="Arial Bold" size="48.0" />
                      </font>
@@ -40,13 +40,13 @@
             </GridPane>
          </children>
       </AnchorPane>
-      <Label fx:id="resultLabel" alignment="CENTER" layoutX="338.0" layoutY="76.0" prefHeight="71.0" prefWidth="710.0" text="Your Transaction is Successful" textFill="#eb4d55">
+      <Label fx:id="resultLabel" alignment="CENTER" layoutX="338.0" layoutY="76.0" prefHeight="71.0" prefWidth="710.0" text="Your Transaction is Successful" textFill="#106b00">
          <font>
             <Font name="Arial Bold" size="36.0" />
          </font>
       </Label>
-      <Rectangle fill="WHITE" height="499.0" layoutX="114.0" layoutY="147.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="1159.0" />
-      <Button fx:id="backToHomeBtn" layoutX="583.0" layoutY="688.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="221.0" style="-fx-background-color: #4D5DEB;" text="Back To Home" textFill="WHITE">
+      <Rectangle fill="WHITE" height="499.0" layoutX="114.0" layoutY="147.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" visible="false" width="1159.0" />
+      <Button fx:id="backToHomeBtn" layoutX="583.0" layoutY="688.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="221.0" style="-fx-background-color: #02a102;" text="Back To Home" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font>
@@ -64,7 +64,7 @@
             <Font name="Arial Bold" size="26.0" />
          </font>
       </Text>
-      <Label fx:id="owner" layoutX="256.0" layoutY="255.0" prefHeight="48.0" prefWidth="586.0" text="DungNM">
+      <Label fx:id="owner" layoutX="256.0" layoutY="255.0" prefHeight="48.0" prefWidth="586.0" text="Nguyen Gia Thanh">
          <font>
             <Font name="Arial" size="26.0" />
          </font>
@@ -84,7 +84,7 @@
             <Font name="Arial Bold" size="26.0" />
          </font>
       </Text>
-      <Label fx:id="amount" layoutX="258.0" layoutY="460.0" prefHeight="48.0" prefWidth="907.0" text="420,000VND">
+      <Label fx:id="amount" layoutX="271.0" layoutY="478.0" prefHeight="48.0" prefWidth="907.0" text="420,000VND">
          <font>
             <Font name="Arial" size="26.0" />
          </font>
@@ -104,5 +104,10 @@
             <Font name="Arial Bold" size="32.0" />
          </font>
       </Label>
+      <ImageView fitHeight="426.0" fitWidth="412.0" layoutX="822.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/images/payment-success.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

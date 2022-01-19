@@ -12,16 +12,16 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="347.0" prefWidth="289.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="347.0" prefWidth="289.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <Pane layoutX="1.0" prefHeight="349.0" prefWidth="320.0" style="-fx-background-color: #F4FAFD; -fx-border-color: #111111;">
             <children>
-                <ImageView fx:id="bikeImage" fitHeight="148.0" fitWidth="269.0" layoutX="29.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="bikeImage" fitHeight="148.0" fitWidth="269.0" layoutX="86.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../assets/images/bike/Bike.png" />
+                        <Image url="@../../assets/images/bike/Bike.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="view" layoutX="120.0" layoutY="293.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #4D5DEB;" text="View" textFill="WHITE">
+                <Button fx:id="view" layoutX="98.0" layoutY="291.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #02a102;" text="View" textFill="WHITE">
                     <font>
                         <Font name="Arial Bold" size="24.0" />
                     </font>
@@ -40,19 +40,19 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <ImageView fitHeight="26.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="40.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../../../assets/images/bike/Number.png" />
+                                <Image url="@../../assets/images/bike/Number.png" />
                             </image>
                         </ImageView>
-                        <Label fx:id="licensePlate" prefHeight="26.0" prefWidth="150.0" text="29A-12134" GridPane.columnIndex="1">
+                        <Label fx:id="licensePlate" prefHeight="50.0" prefWidth="151.0" text="29A-12134" textFill="#02a102" GridPane.columnIndex="1">
                             <font>
                                 <Font name="Arial Bold" size="18.0" />
                             </font>
                         </Label>
-                        <ImageView fitHeight="39.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                        <ImageView fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                             <image>
-                                <Image url="@../../../assets/images/bike/Barcode.png" />
+                                <Image url="@../../assets/images/bike/Barcode.png" />
                             </image>
                         </ImageView>
                         <Label fx:id="barcode" prefHeight="26.0" prefWidth="130.0" text="123456" GridPane.columnIndex="1" GridPane.rowIndex="1">
